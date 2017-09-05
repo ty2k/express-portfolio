@@ -6,11 +6,17 @@ const app = express();
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const PORT = process.env.PORT || 3000;
+const GA_TRACKING_ID = process.env.GA_TRACKING_ID;
 const GMAIL_USER = process.env.GMAIL_USER;
 const GMAIL_PASS = process.env.GMAIL_PASS;
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
+
+app.use((req, res, next) => {
+  res.locals.googleAnalyticsId = GA_TRACKING_ID;
+  next();
+});
 
 // GET route to index
 app.get('/', (req, res) => {
