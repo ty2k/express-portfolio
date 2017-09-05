@@ -1,0 +1,25 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Tyler Krys",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ty2k/portfolio"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "nodemailer": "^4.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.6.1"
+  }
+}
