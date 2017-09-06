@@ -25,10 +25,12 @@ app.use((req, res, next) => {
 });
 
 // For production (Heroku) http:// requests, redirect to https://
-if (app.get('env') === 'production') {
+if (app.all('env') === 'production') {
   app.use((req, res, next) => {
     if (req.header('X-Forwarded-Proto') !== 'https') {
       res.redirect(`https://${req.header('host')}${req.url}`);
+    } else if (req.headers.host.match(/^www/) !== null ) {
+      res.redirect('https://' + req.headers.host.replace(/^www\./, '') + req.url);
     } else {
       next();
     }
