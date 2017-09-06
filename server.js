@@ -5,18 +5,35 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+const sass = require('node-sass-middleware');
 const PORT = process.env.PORT || 3000;
 const GA_TRACKING_ID = process.env.GA_TRACKING_ID;
 const GMAIL_USER = process.env.GMAIL_USER;
 const GMAIL_PASS = process.env.GMAIL_PASS;
-app.use(express.static('public'));
-app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
-
+app.use(bodyParser.urlencoded({extended: true}));
+app.use('/styles', sass({
+  src: __dirname + '/styles',
+  dest: __dirname + '/public/styles',
+  debug: true,
+  outputStyle: 'expanded'
+}));
+app.use(express.static('public'));
 app.use((req, res, next) => {
   res.locals.googleAnalyticsId = GA_TRACKING_ID;
   next();
 });
+
+// For production (Heroku) http:// requests, redirect to https://
+if (app.get('env') === 'production') {
+  app.use((req, res, next) => {
+    if (req.header('X-Forwarded-Proto') !== 'https') {
+      res.redirect(`https://${req.header('host')}${req.url}`);
+    } else {
+      next();
+    }
+  });
+}
 
 // GET route to index
 app.get('/', (req, res) => {
