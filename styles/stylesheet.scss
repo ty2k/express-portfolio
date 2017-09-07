@@ -1,0 +1,85 @@
+$semi-transparent-dark-background: rgba(0, 0, 0, 0.7);
+
+body, html {
+  background-color: #ffffff;
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+.container-contact {
+  .form-horizontal {
+    background-color: $semi-transparent-dark-background;
+    margin-left: -15px;
+    padding: 1em;
+    position: absolute;
+    top: 10%;
+    width: 100%;
+  }
+  background-image: url('../images/marsh-1600x1200.jpg');
+  color: #ffffff;
+}
+
+.container-full-height {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.container-hero {
+  background-image: url('../images/river-valley-1600x1200.jpg');
+  color: #ffffff;
+}
+
+.container-social {
+  .col-social {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.hero-headline {
+  .gravatar {
+    border-radius: 150px;
+    display: block;
+    filter: grayscale(0%);
+    margin: auto;
+    padding: 1em;
+  }
+  .gravatar:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    transition:all 0.3s ease;
+  }
+  a {
+    color: #ffffff;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  h1 {
+    letter-spacing: 0.1em;
+    font-size: 3em;
+    font-weight: 100;
+    text-transform: uppercase;
+  }
+  p {
+    line-height: 1.3em;
+    font-weight: 300;
+    margin-bottom: 0.5em;
+  }
+  background-color: $semi-transparent-dark-background;
+  padding: 1em 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 100%;
+  position: absolute;
+  top: 30%;
+  width: 100%;
+}
