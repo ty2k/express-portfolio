@@ -15,10 +15,15 @@
   },
   "dependencies": {
     "body-parser": "^1.17.2",
+    "dotenv": "^4.0.0",
     "ejs": "^2.5.7",
     "express": "^4.15.4",
+    "knex": "^0.13.0",
+    "knex-logger": "^0.1.0",
+    "moment": "^2.18.1",
     "node-sass-middleware": "^0.11.0",
-    "nodemailer": "^4.1.0"
+    "nodemailer": "^4.1.0",
+    "pg": "^7.3.0"
   },
   "devDependencies": {
     "eslint": "^4.6.1"
