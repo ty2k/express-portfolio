@@ -1,3 +1,4 @@
+$dark-grey: #888888;
 $semi-transparent-dark-background: rgba(0, 0, 0, 0.7);
 
 body, html {
@@ -5,6 +6,17 @@ body, html {
   height: 100%;
   margin: 0;
   width: 100%;
+}
+
+.blog-date {
+  color: $dark-grey;
+  font-weight: 300px;
+  font-size: 0.9em;
+}
+
+.container-blog {
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .container-contact {
@@ -80,6 +92,6 @@ body, html {
   margin-right: auto;
   max-height: 100%;
   position: absolute;
-  top: 30%;
+  top: 28%;
   width: 100%;
 }
