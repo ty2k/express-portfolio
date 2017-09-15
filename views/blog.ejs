@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= post.title %> - Tyler Krys</title>
+    <% include partials/_head.ejs %>
+    <!-- Canonical -->
+    <link rel="canonical" href="https://tylerkrys.ca/blog">
+  </head>
+  <body>
+    <% include partials/_header.ejs %>
+    <div class="container container-blog">
+      <h1><%= post.title %></h1>
+      <p class="blog-date"><%= timeCreated %></p>
+      <p><%= post.body %></p>
+    </div>
+    <div class="container">
+      <div class="jumbotron">
+        <h2>Thanks for reading.</h2><p>Check out my other <a href="/blog">blog articles</a> or my <a href="/">portfolio</a> while you're here.</p>
+      </div>
+    </div>
+    <% include partials/_footer.ejs %>
+    <% include partials/_bootstrap.ejs %>
+  </body>
+</html>

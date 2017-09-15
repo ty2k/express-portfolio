@@ -1,15 +1,24 @@
 'use strict';
 
 // Server setup
+require('dotenv').config();
 const express = require('express');
 const app = express();
+const ENV = process.env.NODE_ENV || 'development';
+const PORT = process.env.PORT || 3000;
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const sass = require('node-sass-middleware');
-const PORT = process.env.PORT || 3000;
+const knexConfig = require('./knexfile');
+const db = require('./db');
 const GA_TRACKING_ID = process.env.GA_TRACKING_ID;
 const GMAIL_USER = process.env.GMAIL_USER;
 const GMAIL_PASS = process.env.GMAIL_PASS;
+const blogRoutes = require('./routes/blog');
+
+db.init(app, knexConfig[ENV]);
+const knex = db.handle();
+
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use('/styles', sass({
@@ -68,6 +77,9 @@ app.post('/contact', function (req, res) {
     }
   });
 });
+
+// Imported routes from ./routes directory
+app.use('/blog', blogRoutes);
 
 // Persistent Listener
 app.listen(PORT, () => {

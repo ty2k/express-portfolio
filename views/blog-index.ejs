@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Blog - All Posts - Tyler Krys</title>
+    <% include partials/_head.ejs %>
+    <!-- Canonical -->
+    <link rel="canonical" href="https://tylerkrys.ca/blog">
+  </head>
+  <body>
+    <% include partials/_header.ejs %>
+    <div class="container container-blog">
+      <div class="jumbotron">
+        <h1>Blog</h1>
+        <p>This is the list of all the blog posts. Click a blog's title to link to just that one article.</p>
+      </div>
+      <% posts.forEach(function(post) { %>
+        <a href="/blog/<%= post.slug %>" title="<%= post.title %>">
+          <h1><%= post.title %></h1>
+        </a>
+        <p><%= post.body %></p>
+      <% }) %>
+    </div>
+    <% include partials/_footer.ejs %>
+    <% include partials/_bootstrap.ejs %>
+  </body>
+</html>
