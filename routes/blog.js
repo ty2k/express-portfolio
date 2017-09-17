@@ -16,7 +16,6 @@ router.get('/', function(req, res) {
       let templateVars = {
         posts: results
       }
-      console.log(results);
       res.render("blog-index", templateVars);
     });
 });
@@ -36,7 +35,6 @@ router.get('/:slug', function (req, res) {
         post: results[0],
         timeCreated: moment(results[0].time_created_at).format('MMMM D, YYYY')
       }
-      console.log(results);
       res.render("blog", templateVars);
     });
 });
