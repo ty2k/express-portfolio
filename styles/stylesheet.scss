@@ -1,4 +1,5 @@
 $dark-grey: #888888;
+$light-grey: #f7f7f9;
 $semi-transparent-dark-background: rgba(0, 0, 0, 0.7);
 
 body, html {
@@ -8,10 +9,36 @@ body, html {
   width: 100%;
 }
 
+footer {
+  a:hover {
+    text-decoration: none;
+  }
+  p {
+    font-size: 2em;
+    line-height: 5em;
+  }
+  height: 5em;
+  text-align: center;
+}
+
 .blog-date {
   color: $dark-grey;
   font-weight: 300px;
   font-size: 0.9em;
+}
+
+.blog-post {
+  h2 {
+    padding: 0.4em 0;
+  }
+  p,
+  li {
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  pre {
+    background-color: $light-grey;
+    padding: 0.2rem 0.4rem;
+  }
 }
 
 .container-blog {
@@ -30,6 +57,10 @@ body, html {
   }
   background-image: url('../images/marsh-1600x1200.jpg');
   color: #ffffff;
+}
+
+.container-contact-solid {
+  background-color: #fff999;
 }
 
 .container-full-height {
