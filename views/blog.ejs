@@ -8,14 +8,22 @@
   </head>
   <body>
     <% include partials/_header.ejs %>
-    <div class="container container-blog">
-      <h1><%= post.title %></h1>
-      <p class="blog-date"><%= timeCreated %></p>
-      <p><%= post.body %></p>
-    </div>
     <div class="container">
-      <div class="jumbotron">
-        <h2>Thanks for reading.</h2><p>Check out my other <a href="/blog">blog articles</a> or my <a href="/">portfolio</a> while you're here.</p>
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="container container-blog">
+            <h1><%= post.title %></h1>
+            <p class="blog-date"><%= timeCreated %></p>
+            <div class="blog-post">
+              <%- post.body %>
+            </div>
+          </div>
+          <div class="container">
+            <div class="jumbotron">
+              <h2>Thanks for reading.</h2><p>Check out my other <a href="/blog">blog articles</a> or my <a href="/">portfolio</a> while you're here.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <% include partials/_footer.ejs %>
