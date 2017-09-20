@@ -1,7 +1,7 @@
 @import "variables";
 
 body, html {
-  background-color: #ffffff;
+  background-color: $white;
   height: 100%;
   margin: 0;
   width: 100%;
@@ -54,11 +54,11 @@ footer {
     width: 100%;
   }
   background-image: url('../images/marsh-1600x1200.jpg');
-  color: #ffffff;
+  color: $white;
 }
 
 .container-contact-solid {
-  background-color: #fff999;
+  background-color: $yellow-light;
 }
 
 .container-full-height {
@@ -72,7 +72,7 @@ footer {
 
 .container-hero {
   background-image: url('../images/river-valley-1600x1200.jpg');
-  color: #ffffff;
+  color: $white;
 }
 
 .container-social {
@@ -99,7 +99,7 @@ footer {
     transition:all 0.3s ease;
   }
   a {
-    color: #ffffff;
+    color: $white;
   }
   a:hover {
     text-decoration: none;
