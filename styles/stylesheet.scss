@@ -1,6 +1,4 @@
-$dark-grey: #888888;
-$light-grey: #f7f7f9;
-$semi-transparent-dark-background: rgba(0, 0, 0, 0.7);
+@import "variables";
 
 body, html {
   background-color: #ffffff;
@@ -22,7 +20,7 @@ footer {
 }
 
 .blog-date {
-  color: $dark-grey;
+  color: $grey-dark;
   font-weight: 300px;
   font-size: 0.9em;
 }
@@ -36,7 +34,7 @@ footer {
     font-family: Georgia, "Times New Roman", Times, serif;
   }
   pre {
-    background-color: $light-grey;
+    background-color: $grey-light;
     padding: 0.2rem 0.4rem;
   }
 }
