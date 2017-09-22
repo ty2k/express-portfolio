@@ -6,31 +6,45 @@ const express = require('express');
 const app = express();
 const ENV = process.env.NODE_ENV || 'development';
 const PORT = process.env.PORT || 3000;
-const bodyParser = require('body-parser');
-const sass = require('node-sass-middleware');
-const knexConfig = require('./knexfile');
-const db = require('./db');
 const GA_TRACKING_ID = process.env.GA_TRACKING_ID;
+const bodyParser = require('body-parser');
+const compression = require('compression');
+const db = require('./db');
+const knexConfig = require('./knexfile');
+const minifyHTML = require('express-minify-html');
+const sass = require('node-sass-middleware');
 const blogRoutes = require('./routes/blog');
 const contactRoutes = require('./routes/contact');
 const resumeRoutes = require('./routes/resume');
 
 db.init(app, knexConfig[ENV]);
-const knex = db.handle();
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
-app.use('/styles', sass({
-  src: __dirname + '/styles',
-  dest: __dirname + '/public/styles',
-  debug: true,
-  outputStyle: 'expanded'
-}));
 app.use(express.static('public'));
 app.use((req, res, next) => {
   res.locals.googleAnalyticsId = GA_TRACKING_ID;
   next();
 });
+app.use('/styles', sass({
+  src: __dirname + '/styles',
+  dest: __dirname + '/public/styles',
+  debug: true,
+  outputStyle: 'compressed'
+}));
+app.use(compression());
+app.use(minifyHTML({
+  override: true,
+  exception_url: false,
+  htmlMinifier: {
+    removeComments: true,
+    collapseWhitespace: true,
+    collapseBooleanAttributes: true,
+    removeAttributeQuotes: true,
+    removeEmptyAttributes: true,
+    minifyJS: true
+  }
+}));
 
 // For production (Heroku) http:// requests, redirect to https://
 if (app.get('env') === 'production') {
