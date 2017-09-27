@@ -28,6 +28,7 @@
     "pg": "^7.3.0"
   },
   "devDependencies": {
+    "ejs-lint": "^0.3.0",
     "eslint": "^4.6.1"
   }
 }
