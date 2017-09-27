@@ -21,121 +21,37 @@
 
     <div class="container container-projects" id="projects">
       <h2 class="heading-thin text-center">Web Development Projects</h2>
-
-      <div class="row project">
-        <div class="col-xs-12 col-sm-5">
-          <div class="project-img-container">
-            <img src="/images/screenshot-express-portfolio.jpg" class="img-fluid">
+      <% projects.forEach(function(project) { %>
+        <div class="row project">
+          <div class="col-xs-12 col-sm-5">
+            <div class="project-img-container">
+              <img src="<%= project.screenshot_url %>" class="img-fluid" alt="Screenshot of <%= project.name %>">
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-7">
+            <h3><%= project.name %></h3>
+            <p class="project-stack">
+              <%- project.tech_stack.join(' &#124; ') %>
+            </p>
+            <p class="project-description">
+              <%- project.body %>
+            </p>
+            <a class="link-unstyled btn-project" href="<%= project.github_url %>" title="View <%= project.name %> GitHub repo">
+              <%= project.github_caption %>
+            </a> &nbsp;
+            <% if (project.secondary_url) { %>
+              <a class="link-unstyled btn-project" href="<%= project.secondary_url %>" title="<%= project.secondary_caption %>">
+                <%= project.secondary_caption %>
+              </a> &nbsp;
+            <% } %>
+            <% if (project.deployment_url) { %>
+              <a class="link-unstyled btn-project" href="<%= project.deployment_url %>" title="<%= project.deployment_caption %>">
+                <%= project.deployment_caption %>
+              </a> &nbsp;
+            <% } %>
           </div>
         </div>
-        <div class="col-xs-12 col-sm-7">
-          <h3>Express Portfolio</h3>
-          <p class="project-stack">Node &#124; Express &#124; Extended JavaScript &#124; Postgres &#124; Knex &#124; Sass &#124; Bootstrap &#124; Nodemailer</p>
-          <p class="project-description">This portfolio site is driven by a Node.js and Express app and styled with Sass and Bootstrap. The <a href="#contact-form">contact form</a> uses Nodemailer, which I've recently <a href="/blog/adding-nodemailer-email-contact-form-node-express-app" title="Adding a Nodemailer Email Contact Form to a Node and Express App">blogged about</a> using a custom blog stored with Postgres and accessed with Knex. The site is deployed on Heroku, served over HTTPS, and compressed and minified to load in a snap.</p>
-          <a class="link-unstyled btn-project" href="https://github.com/ty2k/express-portfolio">Visit project GitHub</a>
-        </div>
-      </div>
-
-      <div class="row project">
-        <div class="col-xs-12 col-sm-5">
-          <div class="project-img-container">
-            <img src="/images/screenshot-community-calendar.jpg" class="img-fluid">
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-7">
-          <h3>Community Calendar</h3>
-          <p class="project-stack">Node &#124; Express &#124; Extended JavaScript &#124; Postgres &#124; Knex &#124; Sass &#124; Bootstrap &#124; bcrypt &#124; cookie-session</p>
-          <p class="project-description">Community Calendar is a group project that aggregates local events for easy browsing. Registered users are able to save their favorite events and event venues. NPM packages bcrypt and cookie-session are used for user authentication. <a href="https://ccalendar.ca">See it deployed</a> and check out what's happening in your neighborhood.</p>
-          <a class="link-unstyled btn-project" href="https://github.com/ty2k/CommunityCalendar">Visit project GitHub</a>
-          <a class="link-unstyled btn-project" href="https://ccalendar.ca">Visit project website</a>
-        </div>
-      </div>
-
-      <div class="row project">
-        <div class="col-xs-12 col-sm-5">
-          <div class="project-img-container">
-            <img src="/images/screenshot-jungle-rails.jpg" class="img-fluid">
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-7">
-          <h3>Jungle Rails</h3>
-          <p class="project-stack">Rails &#124; RSpec &#124; Postgres &#124; Sass &#124; Bootstrap &#124; Stripe API</p>
-          <p class="project-description">A Rails e-commerce project with an inherited codebase. I added admin functionality (adding and removing products and categories with HTTP basic authentication), product reviews, and RSpec testing.</p>
-          <a class="link-unstyled btn-project" href="https://github.com/ty2k/jungle-rails">Visit project GitHub</a>
-        </div>
-      </div>
-
-      <div class="row project">
-        <div class="col-xs-12 col-sm-5">
-          <div class="project-img-container">
-            <img src="/images/screenshot-chatty-app.jpg" class="img-fluid">
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-7">
-          <h3>Chatty App</h3>
-          <p class="project-stack">Node &#124; React &#124; Express &#124; WebSockets &#124; uuid</p>
-          <p class="project-description">Chatty App is a Node/React client with a matching Node/Express/WebSockets server (<a href="https://github.com/ty2k/chatty-server" title="Chatty Server on GitHub">Chatty Server</a>) that allows users to chat in a common chatroom in their web browser. Users can change their display names, and all messages are tagged with a UUID.</p>
-          <a class="link-unstyled btn-project" href="https://github.com/ty2k/chatty-app">Visit client GitHub</a>
-          <a class="link-unstyled btn-project" href="https://github.com/ty2k/chatty-server">Visit server GitHub</a>
-        </div>
-      </div>
-
-      <div class="row project">
-        <div class="col-xs-12 col-sm-5">
-          <div class="project-img-container">
-            <img src="/images/screenshot-wikimaps.jpg" class="img-fluid">
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-7">
-          <h3>WikiMaps</h3>
-          <p class="project-stack">Node &#124; Express &#124; Embedded JavaScript &#124; Postgres &#124; Knex &#124; Sass &#124; Bootstrap &#124; bcrypt &#124; cookie-session &#124;</p>
-          <p class="project-description">A group Node and Express app that uses the Google Maps JavaScript API to let users plot points on maps for sharing. The site is styled with Bootstrap and Sass using a mobile-first approach. User authentication is achieved with bcrypt and cookie-session.</p>
-          <a class="link-unstyled btn-project" href="https://github.com/ty2k/WikiMaps">Visit project GitHub</a>
-        </div>
-      </div>
-
-      <div class="row project">
-        <div class="col-xs-12 col-sm-5">
-          <div class="project-img-container">
-            <img src="/images/screenshot-tweeter.jpg" class="img-fluid">
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-7">
-          <h3>Tweeter</h3>
-          <p class="project-stack">Node &#124; Express &#124; jQuery &#124; MongoDB &#124; Vanillicon API</p>
-          <p class="project-description">Tweeter is a single page app that uses jQuery and MongoDB to store and present Twitter-like tweets dynamically. Vanillicon's API is used to select random avatars for the tweets.</p>
-          <a class="link-unstyled btn-project" href="https://github.com/ty2k/tweeter">Visit project GitHub</a>
-        </div>
-      </div>
-
-      <div class="row project">
-        <div class="col-xs-12 col-sm-5">
-          <div class="project-img-container">
-            <img src="/images/screenshot-tinyapp.jpg" class="img-fluid">
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-7">
-          <h3>TinyApp</h3>
-          <p class="project-stack">Node &#124; Express &#124; Embedded JavaScript &#124; bcrypt &#124; cookie-session</p>
-          <p class="project-description">A Bitly-like URL shortening service built with Node and Express and templated with EJS. User authentication is accomplished with bcrypt and cookie-session.</p>
-          <a class="link-unstyled btn-project" href="https://github.com/ty2k/tinyapp">Visit project GitHub</a>
-        </div>
-      </div>
-
-      <div class="row project">
-        <div class="col-xs-12 col-sm-5">
-          <div class="project-img-container">
-            <img src="/images/screenshot-github-avatar-downloader.jpg" class="img-fluid">
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-7">
-          <h3>GitHub Avatar Downloader</h3>
-          <p class="project-stack">Node &#124; Dotenv &#124; request &#124; GitHub API</p>
-          <p class="project-description">A Node app that consumes the GitHub API to pipe the avatar JPEGs of project contributors into a local directory.</p>
-          <a class="link-unstyled btn-project" href="https://github.com/ty2k/github-avatar-downloader">Visit project GitHub</a>
-        </div>
-      </div>
-
+      <% } ) %>
     </div>
 
     <div class="container container-social" id="social-links">
