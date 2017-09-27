@@ -18,6 +18,7 @@ const contactRoutes = require('./routes/contact');
 const resumeRoutes = require('./routes/resume');
 
 db.init(app, knexConfig[ENV]);
+const knex = db.handle();
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
@@ -59,7 +60,15 @@ if (app.get('env') === 'production') {
 
 // GET route to index
 app.get('/', (req, res) => {
-  res.render('index');
+  knex('projects')
+    .select(['*'])
+    .orderBy('display_order', 'desc')
+    .then((results) => {
+      let templateVars = {
+        projects: results
+      };
+      res.render('index', templateVars);
+    });
 });
 
 // Imported routes from ./routes directory
