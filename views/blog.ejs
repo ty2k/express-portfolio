@@ -4,7 +4,7 @@
     <title><%= post.title %> - Tyler Krys</title>
     <% include partials/_head.ejs %>
     <!-- Canonical -->
-    <link rel="canonical" href="https://tylerkrys.ca/blog">
+    <link rel="canonical" href="https://tylerkrys.ca/blog/<%= post.slug %>">
   </head>
   <body>
     <% include partials/_header.ejs %>
