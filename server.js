@@ -7,12 +7,16 @@ const app = express();
 const ENV = process.env.NODE_ENV || 'development';
 const PORT = process.env.PORT || 3000;
 const GA_TRACKING_ID = process.env.GA_TRACKING_ID;
+const KEY_1 = process.env.COOKIE_SESSION_KEY_1;
+const KEY_2 = process.env.COOKIE_SESSION_KEY_2;
 const bodyParser = require('body-parser');
 const compression = require('compression');
+const cookieSession = require('cookie-session');
 const db = require('./db');
 const knexConfig = require('./knexfile');
 const minifyHTML = require('express-minify-html');
 const sass = require('node-sass-middleware');
+const adminRoutes = require('./routes/admin');
 const blogRoutes = require('./routes/blog');
 const contactRoutes = require('./routes/contact');
 const resumeRoutes = require('./routes/resume');
@@ -22,8 +26,13 @@ const knex = db.handle();
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(cookieSession({
+  name: 'session',
+  keys: [KEY_1, KEY_2]
+}))
 app.use(express.static('public'));
 app.use((req, res, next) => {
+  res.locals.userId = req.session.userId;
   res.locals.googleAnalyticsId = GA_TRACKING_ID;
   next();
 });
@@ -72,6 +81,7 @@ app.get('/', (req, res) => {
 });
 
 // Imported routes from ./routes directory
+app.use('/admin', adminRoutes);
 app.use('/blog', blogRoutes);
 app.use('/contact', contactRoutes);
 app.use('/resume', resumeRoutes);
