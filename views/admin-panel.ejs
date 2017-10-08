@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Admin Panel</title>
+    <% include partials/_head.ejs %>
+    <!-- No-index -->
+    <meta name="robots" content="noindex">
+  </head>
+  <body>
+    <% include partials/_header.ejs %>
+    <div class="col-xs-12 col-sm-6 offset-sm-3">
+      <div class="container">
+        <h1 class="heading-thin text-center">Admin Panel</h1>
+        <% if (userId) { %>
+          <form action="/admin/logout" method="POST">
+            <button type="submit" class="btn btn-block btn-primary">Logout</button>
+          </form>
+        <% } else { %>
+          <p class="text-center">
+            <a href="/admin/login">Login</a>
+          </p>
+        <% } %>
+      </div>
+    </div>
+    <% include partials/_footer.ejs %>
+    <% include partials/_bootstrap.ejs %>
+  </body>
+</html>
