@@ -6,6 +6,10 @@ This Express app is used for my [portfolio website](https://tylerkrys.ca). It in
 
 `npm install`
 
+Knex migration files are included to create three tables in the database: `posts`, `projects`, and `users`. Run these with `knex migrate:latest`.
+
+A Knex seed file is included to populate the `projects` table with my portfolio project data. Run this with `knex seed:run`.
+
 ## Contact form setup
 
 Currently, `server.js` is set up to use Gmail to send mail using [Nodemailer](https://nodemailer.com). To create your own instance of this app, you would need to add your Gmail account and an [application-specific password](https://security.google.com/settings/security/apppasswords) to the environment:
