@@ -13,6 +13,7 @@ const bodyParser = require('body-parser');
 const compression = require('compression');
 const cookieSession = require('cookie-session');
 const db = require('./db');
+const helmet = require('helmet');
 const knexConfig = require('./knexfile');
 const minifyHTML = require('express-minify-html');
 const sass = require('node-sass-middleware');
@@ -25,11 +26,12 @@ db.init(app, knexConfig[ENV]);
 const knex = db.handle();
 
 app.set('view engine', 'ejs');
+app.use(helmet());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieSession({
   name: 'session',
   keys: [KEY_1, KEY_2]
-}))
+}));
 app.use(express.static('public'));
 app.use((req, res, next) => {
   res.locals.userId = req.session.userId;
