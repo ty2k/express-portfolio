@@ -58,6 +58,12 @@ app.use(minifyHTML({
   }
 }));
 
+// Imported routes from ./routes directory
+app.use('/admin', adminRoutes);
+app.use('/blog', blogRoutes);
+app.use('/contact', contactRoutes);
+app.use('/resume', resumeRoutes);
+
 // For production (Heroku) http:// requests, redirect to https://
 if (app.get('env') === 'production') {
   app.use((req, res, next) => {
@@ -82,11 +88,10 @@ app.get('/', (req, res) => {
     });
 });
 
-// Imported routes from ./routes directory
-app.use('/admin', adminRoutes);
-app.use('/blog', blogRoutes);
-app.use('/contact', contactRoutes);
-app.use('/resume', resumeRoutes);
+// 404 catch-all route
+app.get('*', function(req, res){
+  res.status(404).render('404');
+});
 
 // Persistent Listener
 app.listen(PORT, () => {
