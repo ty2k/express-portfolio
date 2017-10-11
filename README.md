@@ -63,6 +63,7 @@ App runs on port 3000 by default.
 - [dotenv](https://www.npmjs.com/package/dotenv) loads environment variables from the `.env` file into `process.env`
 - [Embedded JavaScript](http://www.embeddedjs.com/) for JavaScript templating
 - [express-minify-html](https://www.npmjs.com/package/express-minify-html) minifies HTML in the Express response object for speedy transmission
+- [Helmet](https://helmetjs.github.io/) for HTTP header security
 - [Knex.js](http://knexjs.org/) builds SQL queries
 - [knex-logger](https://www.npmjs.com/package/knex-logger) log Knex queries
 - [moment](https://www.npmjs.com/package/moment) formats dates in the blog

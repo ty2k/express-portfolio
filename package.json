@@ -22,6 +22,7 @@
     "ejs": "^2.5.7",
     "express": "^4.15.4",
     "express-minify-html": "^0.11.4",
+    "helmet": "^3.8.2",
     "knex": "^0.13.0",
     "knex-logger": "^0.1.0",
     "moment": "^2.18.1",
