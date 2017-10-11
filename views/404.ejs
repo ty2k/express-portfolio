@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>404 - Tyler Krys</title>
+    <% include partials/_head.ejs %>
+    <!-- No-index -->
+    <meta name="robots" content="noindex">
+  </head>
+  <body>
+    <% include partials/_header.ejs %>
+    <div class="container">
+      <h1 class="heading-thin text-center">404</h1>
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <p>There's nothing here. Maybe you meant one of these options instead?</p>
+          <div class="list-group">
+            <a href="/" class="list-group-item list-group-item-action">Home</a>
+            <a href="/#project" class="list-group-item list-group-item-action">Web Development Projects</a>
+            <a href="/#social-links" class="list-group-item list-group-item-action">Social Media</a>
+            <a href="/blog" class="list-group-item list-group-item-action">Blog</a>
+            <a href="/#contact-form" class="list-group-item list-group-item-action">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% include partials/_bootstrap.ejs %>
+  </body>
+</html>
