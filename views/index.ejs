@@ -10,18 +10,17 @@
     <% include partials/_header.ejs %>
     <div class="container-full-height container-hero">
       <div class="hero-headline">
-        <div class="container">
+        <div class="col-xs-12 col-sm-6 offset-sm-3">
           <h1 class="text-center"><a href="https://tylerkrys.ca">Tyler Krys</a></h1>
           <img src="/images/gravatar-150px.png" class="gravatar" alt="Tyler Krys">
-          <p class="text-center">Web developer with a background in retail marketing and sales.</p>
-          <p class="text-center">Seeking opportunities in Victoria, BC.</p>
+          <p class="text-center">Web developer with a background in retail marketing and sales in Victoria, BC.</p>
         </div>
       </div>
     </div>
 
     <div class="container container-projects" id="projects">
       <h2 class="heading-thin text-center">Web Development Projects</h2>
-      <% projects.forEach(function(project) { %>
+      <% if (locals.projects) { projects.forEach(function(project) { %>
         <div class="row project">
           <div class="col-xs-12 col-sm-5">
             <div class="project-img-container">
@@ -51,7 +50,13 @@
             <% } %>
           </div>
         </div>
-      <% } ) %>
+      <% } ) } else { %>
+        <div class="col-xs-12 col-sm-6 offset-sm-3">
+          <div class="alert alert-info" role="alert">
+            <p><i class="fa fa-github" aria-hidden="true"></i> See all of my web development projects on <a href="https://github.com/ty2k" title="Tyler Krys - GitHub">my GitHub profile</a>.</p>
+          </div>
+        </div>
+      <% } %>
     </div>
 
     <div class="container container-social" id="social-links">
@@ -60,19 +65,19 @@
           <h2 class="heading-thin text-center">Social Media</h2>
           <div class="list-group">
             <a href="https://github.com/ty2k" class="list-group-item active" title="Tyler Krys - GitHub"><i class="fa fa-github" aria-hidden="true"></i>
-     &nbsp GitHub</a>
+     &nbsp; GitHub</a>
             <a href="https://www.linkedin.com/in/TylerKrys/" class="list-group-item list-group-item-action" title="Tyler Krys - LinkedIn"><i class="fa fa-linkedin-square" aria-hidden="true"></i>
-     &nbsp LinkedIn</a>
+     &nbsp; LinkedIn</a>
             <a href="https://codefights.com/profile/ty2k" class="list-group-item list-group-item-action" title="Tyler Krys - CodeFights"><i class="fa fa-code" aria-hidden="true"></i>
-     &nbsp CodeFights</a>
+     &nbsp; CodeFights</a>
             <a href="https://www.freecodecamp.com/ty2k" class="list-group-item list-group-item-action" title="Tyler Krys - freeCodeCamp"><i class="fa fa-free-code-camp" aria-hidden="true"></i>
-     &nbsp freeCodeCamp</a>
+     &nbsp; freeCodeCamp</a>
             <a href="/blog" class="list-group-item list-group-item-action" title="Tyler Krys - Blog"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-     &nbsp Blog</a>
+     &nbsp; Blog</a>
             <a href="https://plus.google.com/u/0/+TylerKrys" class="list-group-item list-group-item-action" title="Tyler Krys - Google Plus"><i class="fa fa-google-plus-official" aria-hidden="true"></i>
-     &nbsp Google&#43;</a>
+     &nbsp; Google&#43;</a>
             <a href="https://twitter.com/TylerKrys" class="list-group-item list-group-item-action" title="Tyler Krys - Twitter"><i class="fa fa-twitter-square" aria-hidden="true"></i>
-     &nbsp Twitter</a>
+     &nbsp; Twitter</a>
           </div>
         </div>
       </div>

@@ -17,14 +17,14 @@
             "error",
             "unix"
         ],
-        "no-console": "off",
+        "no-console": "warn",
         "quotes": [
             "error",
             "single"
         ],
         "semi": [
             "error",
-            "always"
+            "never"
         ]
     }
 }

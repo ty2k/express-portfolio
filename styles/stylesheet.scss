@@ -19,6 +19,12 @@ footer {
   text-align: center;
 }
 
+.alert {
+  p {
+    margin-bottom: 0;
+  }
+}
+
 .blog-date {
   color: $grey-dark;
   font-weight: 300px;

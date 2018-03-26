@@ -1,5 +1,5 @@
 
-exports.seed = function(knex, Promise) {
+exports.seed = (knex, Promise) => {
   // Deletes ALL existing entries
   return knex('projects').del()
     .then(function () {
@@ -91,6 +91,6 @@ exports.seed = function(knex, Promise) {
           deployment_caption: 'Deployed App',
           body: 'This portfolio site is driven by a Node.js and Express app with a Postgres database accessed with Knex. Sass and Bootstrap are used for styling. The <a href="#contact-form">contact form</a> uses Nodemailer, which I have recently <a href="/blog/adding-nodemailer-email-contact-form-node-express-app" title="Adding a Nodemailer Email Contact Form to a Node and Express App">blogged about</a> using a custom blog template. The site is deployed on Heroku, served over HTTPS, and compressed and minified to load in a snap.'
         },
-      ]);
-    });
-};
+      ])
+    })
+}

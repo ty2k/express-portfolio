@@ -13,12 +13,16 @@
         <h1>Blog</h1>
         <p>This is a list of all the blog articles.</p>
       </div>
-      <% posts.forEach(function(post) { %>
+      <% if (locals.posts) { posts.forEach((post) => { %>
         <a href="/blog/<%= post.slug %>" title="<%= post.title %>">
           <h2><%= post.title %></h2>
         </a>
-        <p><%- post.body.substring(0,75) + '...' %> <a href="/blog/<%= post.slug %>" title="<%= post.title %>">(read more)</a></p>
-      <% }) %>
+        <p><%- post.body.substring(0,280) + '...' %> <a href="/blog/<%= post.slug %>" title="<%= post.title %>">(read more)</a></p>
+      <% } ) } else { %>
+        <div class="alert alert-info" role="alert">
+          <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> There are normally some posts here! If they're missing, there is a database problem. My bad.</p>
+        </div>
+      <% } %>
     </div>
     <% include partials/_footer.ejs %>
     <% include partials/_bootstrap.ejs %>

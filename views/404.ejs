@@ -12,14 +12,27 @@
       <h1 class="heading-thin text-center">404</h1>
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
-          <p>There's nothing here. Maybe you meant one of these options instead?</p>
-          <div class="list-group">
-            <a href="/" class="list-group-item list-group-item-action">Home</a>
-            <a href="/#projects" class="list-group-item list-group-item-action">Web Development Projects</a>
-            <a href="/#social-links" class="list-group-item list-group-item-action">Social Media</a>
-            <a href="/blog" class="list-group-item list-group-item-action">Blog</a>
-            <a href="/#contact-form" class="list-group-item list-group-item-action">Contact</a>
-          </div>
+          <% if (locals.isBlogSearch) { %>
+            <h2>Couldn't find that blog post</h2>
+            <p>There doesn't seem to be a blog post with that address. Maybe you're looking for one of these?</p>
+              <div class="list-group">
+                <% if (locals.posts) { posts.forEach((post) => { %>
+                  <a href="/blog/<%= post.slug %>" title="<%= post.title %>" class="list-group-item list-group-item-action">
+                    <%= post.title %>
+                  </a>
+                <% } ) } %>
+              </div>
+          <% } else {%>
+            <h2>Couldn't find that page</h2>
+            <p>There's nothing here. Maybe you meant one of these options instead?</p>
+            <div class="list-group">
+              <a href="/" class="list-group-item list-group-item-action">Home</a>
+              <a href="/#projects" class="list-group-item list-group-item-action">Web Development Projects</a>
+              <a href="/#social-links" class="list-group-item list-group-item-action">Social Media</a>
+              <a href="/blog" class="list-group-item list-group-item-action">Blog</a>
+              <a href="/#contact-form" class="list-group-item list-group-item-action">Contact</a>
+            </div>
+          <% } %>
         </div>
       </div>
     </div>
