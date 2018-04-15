@@ -88,6 +88,9 @@ footer {
 }
 
 .container-hero {
+  p {
+    padding-top: 10px;
+  }
   background-image: url('../images/river-valley-1600x1200.jpg');
   color: $white;
 }
@@ -124,12 +127,11 @@ footer {
     filter: grayscale(0%);
     margin: auto;
     padding: 1em;
+    transition: all 0.6s ease;
   }
   .gravatar:hover {
-    -webkit-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    transform: scale(1.05);
-    transition:all 0.3s ease;
+    background-color: $white;
+    transition: all 0.6s ease;
   }
   a {
     color: $white;
@@ -154,7 +156,7 @@ footer {
   margin-right: auto;
   max-height: 100%;
   position: absolute;
-  top: 28%;
+  top: 18%;
   width: 100%;
 }
 
