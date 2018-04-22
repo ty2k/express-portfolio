@@ -31,6 +31,7 @@ const adminRoutes = require('./routes/admin')
 const blogRoutes = require('./routes/blog')
 const contactRoutes = require('./routes/contact')
 const resumeRoutes = require('./routes/resume')
+const signatureAPIRoutes = require('./routes/signature-api')
 
 app.set('view engine', 'ejs')
 app.use(helmet())
@@ -70,6 +71,7 @@ app.use('/admin', adminRoutes)
 app.use('/blog', blogRoutes)
 app.use('/contact', contactRoutes)
 app.use('/resume', resumeRoutes)
+app.use('/signature-api', signatureAPIRoutes)
 
 // For production (Heroku) http:// requests, redirect to https://
 if (app.get('env') === 'production') {
