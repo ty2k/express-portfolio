@@ -15,7 +15,16 @@ var fontBold = opentype.loadSync('public/fonts/NewsCycle-Bold.ttf')
 router.get('/signature.svg', (req, res) => {
   const dayCount = moment().diff(moment(DAY_COUNT_START.split('-')), 'days')
   const dayDiff = fontRegular.getPath(`Day ${dayCount} of ${DAY_COUNT_TOTAL}`, 0, 18, 18).toSVG()
-  const signature = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">${dayDiff}</svg>`
+  const signature = `
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      version="1.1"
+      width="140"
+      height="22"
+      >
+      ${dayDiff}
+    </svg>`
   res.setHeader('Content-Type', 'image/svg+xml')
   res.status(200).send(signature)
 })
