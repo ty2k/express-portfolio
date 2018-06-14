@@ -91,6 +91,16 @@ exports.seed = (knex, Promise) => {
           deployment_caption: 'Deployed App',
           body: 'This portfolio site is driven by a Node.js and Express app with a Postgres database accessed with Knex. Sass and Bootstrap are used for styling. The <a href="#contact-form">contact form</a> uses Nodemailer, which I have recently <a href="/blog/adding-nodemailer-email-contact-form-node-express-app" title="Adding a Nodemailer Email Contact Form to a Node and Express App">blogged about</a> using a custom blog template. The site is deployed on Heroku, served over HTTPS, and compressed and minified to load in a snap.'
         },
+        {
+          display_order: 7,
+          name: 'Cadence Weapon',
+          slug: 'cadence-weapon',
+          screenshot_url: '/images/screenshot-cadence-weapon.jpg',
+          tech_stack: JSON.stringify(['Node', 'Express', 'Embedded JavaScript', 'Bootstrap 4']),
+          deployment_url: 'https://cadenceweapon.net',
+          deployment_caption: 'Cadence Weapon Official Site',
+          body: 'Rollie "Cadence Weapon" Pemberton is a rapper, DJ, producer, and Edmonton\'s former poet laureate. The <a href="https://cadenceweapon.net" title="Cadence Weapon music, tour dates, lyrics">official Cadence Weapon site</a> is served by an Express app with a responsive Bootstrap 4 design that displays tour dates properly on any size of device.'
+        }
       ])
     })
 }

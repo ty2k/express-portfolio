@@ -40,9 +40,11 @@
             <p class="project-description">
               <%- project.body %>
             </p>
-            <a class="link-unstyled btn-project" href="<%= project.github_url %>" title="View <%= project.name %> GitHub repo">
-              <%= project.github_caption %>
-            </a> &nbsp;
+            <% if (project.github_url) { %>
+              <a class="link-unstyled btn-project" href="<%= project.github_url %>" title="View <%= project.name %> GitHub repo">
+                <%= project.github_caption %>
+              </a> &nbsp;
+            <% } %>
             <% if (project.secondary_url) { %>
               <a class="link-unstyled btn-project" href="<%= project.secondary_url %>" title="<%= project.secondary_caption %>">
                 <%= project.secondary_caption %>
