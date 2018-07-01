@@ -75,9 +75,9 @@ exports.seed = (knex, Promise) => {
           tech_stack: JSON.stringify(['Node', 'Express', 'Embedded JavaScript', 'Postgres', 'Knex', 'Sass', 'Bootstrap', 'bcrypt', 'cookie-session']),
           github_url: 'https://github.com/ty2k/CommunityCalendar',
           github_caption: 'GitHub Repo',
-          deployment_url: 'https://ccalendar.ca',
+          deployment_url: 'https://lhl-community-calendar.herokuapp.com/',
           deployment_caption: 'Deployed App',
-          body: 'Community Calendar is a group project that aggregates local events for easy browsing. Registered users are able to save their favorite events and event venues. NPM packages bcrypt and cookie-session are used for user authentication. <a href="https://ccalendar.ca">See it deployed</a> and check out what is happening in your neighborhood.'
+          body: 'Community Calendar is a group project that aggregates local events for easy browsing. Registered users are able to save their favorite events and event venues. NPM packages bcrypt and cookie-session are used for user authentication. <a href="https://lhl-community-calendar.herokuapp.com/">See it deployed</a> and check out what is happening in your neighborhood.'
         },
         {
           display_order: 7,
