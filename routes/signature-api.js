@@ -9,7 +9,7 @@ const DAY_COUNT_START = process.env.DAY_COUNT_START
 const DAY_COUNT_TOTAL = process.env.DAY_COUNT_TOTAL
 
 var fontRegular = opentype.loadSync('public/fonts/NewsCycle-Regular.ttf')
-var fontBold = opentype.loadSync('public/fonts/NewsCycle-Bold.ttf')
+// var fontBold = opentype.loadSync('public/fonts/NewsCycle-Bold.ttf')
 
 // GET route to signature API
 router.get('/signature.svg', (req, res) => {

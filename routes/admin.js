@@ -6,7 +6,7 @@ const knex = require('../db').handle
 const bcrypt = require('bcrypt')
 
 // GET route to /admin, admin panel landing page
-router.get('/', (req,res) => {
+router.get('/', (req, res) => {
   res.render('admin-panel')
 })
 

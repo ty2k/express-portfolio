@@ -36,7 +36,6 @@ router.get('/:slug', (req, res) => {
               isBlogSearch: true
             }
             res.status(404).render('404', altTemplateVars)
-            return
           })
       } else {
         let templateVars = {
