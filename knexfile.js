@@ -1,3 +1,5 @@
+'use strict'
+
 require('dotenv').config()
 
 module.exports = {
@@ -5,12 +7,12 @@ module.exports = {
   development: {
     client: 'postgresql',
     connection: {
-      host     : process.env.DB_HOST,
-      user     : process.env.DB_USER,
-      password : process.env.DB_PASS,
-      database : process.env.DB_NAME,
-      port     : process.env.DB_PORT,
-      ssl      : false
+      host: process.env.DB_HOST,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASS,
+      database: process.env.DB_NAME,
+      port: process.env.DB_PORT,
+      ssl: false
     },
     migrations: {
       directory: './db/migrations',
@@ -27,6 +29,25 @@ module.exports = {
     pool: {
       min: 2,
       max: 10
+    },
+    migrations: {
+      directory: './db/migrations',
+      tableName: 'migrations'
+    },
+    seeds: {
+      directory: './db/seeds'
+    }
+  },
+
+  test: {
+    client: 'postgresql',
+    connection: {
+      host: process.env.DB_HOST,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASS,
+      database: process.env.DB_NAME,
+      port: process.env.DB_PORT,
+      ssl: false
     },
     migrations: {
       directory: './db/migrations',

@@ -4,6 +4,7 @@
 require('dotenv').config()
 const express = require('express')
 const app = express()
+const path = require('path')
 
 // Environment
 const ENV = process.env.NODE_ENV || 'development'
@@ -47,8 +48,8 @@ app.use((req, res, next) => {
   next()
 })
 app.use('/styles', sass({
-  src: __dirname + '/styles',
-  dest: __dirname + '/public/styles',
+  src: path.join(__dirname, '/styles'),
+  dest: path.join(__dirname, '/public/styles'),
   debug: true,
   outputStyle: 'compressed'
 }))
@@ -101,8 +102,8 @@ app.get('/', (req, res) => {
     })
 })
 
-// GET catch-all route to 404
-app.get('*', (req, res) => {
+// Catch-all route to 404
+app.use((req, res, next) => {
   res.status(404).render('404')
 })
 
@@ -110,3 +111,5 @@ app.get('*', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}.`)
 })
+
+module.exports = app

@@ -1,6 +1,8 @@
 # Express-Portfolio
 
-This Express app is used for my [portfolio website](https://tylerkrys.ca). It includes a project display, a blog, and an email contact form.
+Travis CI build of master branch: [![Travis CI build of master branch](https://travis-ci.org/ty2k/express-portfolio.svg?branch=master)](https://travis-ci.org/ty2k/express-portfolio/)
+
+**Express-Portfolio** serves my [portfolio website](https://tylerkrys.ca). It includes a project display, a blog, and an email contact form.
 
 ## Install
 
@@ -48,11 +50,13 @@ DB_SSL=
 DB_PORT=
 ```
 
+## Test
+
+`npm test` will run StandardJS linting (failing and exiting if there any errors) followed by Mocha/SuperTest unit and integration tests.
+
 ## Run
 
-`npm start`
-
-App runs on port 3000 by default.
+`npm start` to run on port 3000.
 
 ## Dependencies
 
@@ -73,9 +77,11 @@ App runs on port 3000 by default.
 
 ## Dev dependencies
 
-- [ejs-lint](https://www.npmjs.com/package/ejs-lint) for slightly better error messages with EJS
-- [eslint](https://www.npmjs.com/package/eslint) for linting JavaScript
+- [ejs-lint](https://www.npmjs.com/package/ejs-lint) for linting EJS templates
+- [Mocha](https://mochajs.org/) for testing
+- [StandardJS](https://standardjs.com/) for linting JavaScript
+- [SuperTest](https://github.com/visionmedia/supertest) for testing HTTP routes
 
 ## Contact the Author
 
-[Tyler Krys](https://tylerkrys.ca) made this to learn about web development.
+[Tyler Krys](https://tylerkrys.ca) made this.

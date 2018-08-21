@@ -29,8 +29,7 @@ router.post('/', (req, res) => {
       console.log('Failed contact form attempt: ')
       console.log(mailOpts)
       res.render('contact-failure')
-    }
-    else {
+    } else {
       res.render('contact-success')
     }
   })
