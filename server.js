@@ -36,7 +36,7 @@ const signatureAPIRoutes = require('./routes/signature-api')
 
 app.set('view engine', 'ejs')
 app.use(helmet())
-app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cookieSession({
   name: 'session',
   keys: [KEY_1, KEY_2]
