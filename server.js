@@ -74,8 +74,8 @@ app.use('/contact', contactRoutes)
 app.use('/resume', resumeRoutes)
 app.use('/signature-api', signatureAPIRoutes)
 
-// For production (Heroku) http:// requests, redirect to https://
-if (app.get('env') === 'production') {
+// For production http:// requests, redirect to https://
+if (ENV === 'production') {
   app.use((req, res, next) => {
     if (req.header('X-Forwarded-Proto') !== 'https') {
       res.redirect(`https://${req.header('host').replace(/^www\./, '')}${req.url}`)
@@ -103,7 +103,7 @@ app.get('/', (req, res) => {
 })
 
 // Catch-all route to 404
-app.use((req, res, next) => {
+app.use((req, res) => {
   res.status(404).render('404')
 })
 
