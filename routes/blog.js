@@ -25,7 +25,7 @@ router.get('/', (req, res) => {
 router.get('/:slug', (req, res) => {
   knex()('posts')
     .select('*')
-    .where({'posts.slug': req.params.slug})
+    .where({ 'posts.slug': req.params.slug })
     .then((results) => {
       if (results.length === 0) {
         knex()('posts')
@@ -47,7 +47,7 @@ router.get('/:slug', (req, res) => {
     })
     .catch((error) => {
       console.log(error)
-      res.status(404).render('404', {isBlogSearch: false})
+      res.status(404).render('404', { isBlogSearch: false })
     })
 })
 

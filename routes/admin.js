@@ -20,7 +20,7 @@ router.post('/login', (req, res) => {
   knex()
     .select('*')
     .from('users')
-    .where({email: req.body.user})
+    .where({ email: req.body.user })
     .then((results) => {
       if (results.length === 0) {
         res.status(401).send('Login failed')

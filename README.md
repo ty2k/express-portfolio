@@ -62,7 +62,6 @@ DB_PORT=
 
 - [Node.js](https://nodejs.org)
 - [Express](https://expressjs.com/)
-- [body-parser](https://www.npmjs.com/package/body-parser) parses incoming request bodies
 - [compression](https://www.npmjs.com/package/compression) gzips resources for speedy transmission
 - [dotenv](https://www.npmjs.com/package/dotenv) loads environment variables from the `.env` file into `process.env`
 - [Embedded JavaScript](http://www.embeddedjs.com/) for JavaScript templating
