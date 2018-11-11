@@ -18,6 +18,7 @@ const db = require('./db')
 const knexConfig = require('./knexfile')
 db.init(app, knexConfig[ENV])
 const knex = db.handle()
+if (ENV === 'development') { knex.on('query', console.log) }
 
 // Packages
 const bodyParser = require('body-parser')
