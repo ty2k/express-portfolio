@@ -2,7 +2,7 @@
 
 Travis CI build of master branch: [![Travis CI build of master branch](https://travis-ci.org/ty2k/express-portfolio.svg?branch=master)](https://travis-ci.org/ty2k/express-portfolio/)
 
-**Express-Portfolio** serves my [portfolio website](https://tylerkrys.ca). It includes a project display, a blog, and an email contact form.
+**Express-Portfolio** serves my [portfolio website](https://tylerkrys.ca). It includes a project gallery, a blog, and an email contact form.
 
 ## Install
 
@@ -68,7 +68,6 @@ DB_PORT=
 - [express-minify-html](https://www.npmjs.com/package/express-minify-html) minifies HTML in the Express response object for speedy transmission
 - [Helmet](https://helmetjs.github.io/) for HTTP header security
 - [Knex.js](http://knexjs.org/) builds SQL queries
-- [knex-logger](https://www.npmjs.com/package/knex-logger) log Knex queries
 - [moment](https://www.npmjs.com/package/moment) formats dates in the blog
 - [Nodemailer](https://nodemailer.com) sends email from the contact form
 - [node-sass-middleware](https://www.npmjs.com/package/node-sass-middleware) compiles SCSS into CSS
