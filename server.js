@@ -35,8 +35,29 @@ const contactRoutes = require('./routes/contact')
 const resumeRoutes = require('./routes/resume')
 const signatureAPIRoutes = require('./routes/signature-api')
 
+// Middleware
 app.set('view engine', 'ejs')
 app.use(helmet())
+app.use(helmet.contentSecurityPolicy({
+  directives: {
+    'defaultSrc': ['\'none\''],
+    'font-src': ['https://maxcdn.bootstrapcdn.com'],
+    'form-action': ['\'self\''],
+    'img-src': ['\'self\''],
+    'script-src': [
+      '\'unsafe-inline\'',
+      'https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js',
+      'https://code.jquery.com/jquery-3.1.1.slim.min.js',
+      'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js',
+      'https://www.google-analytics.com/analytics.js'
+    ],
+    'style-src': [
+      '\'self\'',
+      'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/',
+      'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/'
+    ]
+  }
+}))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cookieSession({
   name: 'session',
