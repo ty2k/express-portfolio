@@ -21,18 +21,23 @@ router.post('/', (req, res) => {
   mailOpts = {
     from: req.body.name + ' &lt;' + req.body.email + '&gt;',
     to: GMAIL_USER,
-    subject: 'New message from contact form at tylerkrys.ca',
+    subject: `Message from contact form on ${req.body.formlocation}`,
     text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
   }
-  smtpTrans.sendMail(mailOpts, (error) => {
-    if (error) {
-      console.log('Failed contact form attempt: ')
-      console.log(mailOpts)
-      res.render('contact-failure')
-    } else {
-      res.render('contact-success')
-    }
-  })
+
+  if (req.body && req.body.verification && req.body.verification === 'send') {
+    smtpTrans.sendMail(mailOpts, (error) => {
+      if (error) {
+        console.log('Failed contact form attempt: ')
+        console.log(mailOpts)
+        res.render('contact-failure')
+      } else {
+        res.render('contact-success')
+      }
+    })
+  } else {
+    res.render('contact-failure')
+  }
 })
 
 module.exports = router
