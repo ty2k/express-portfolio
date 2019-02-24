@@ -40,10 +40,14 @@ app.set('view engine', 'ejs')
 app.use(helmet())
 app.use(helmet.contentSecurityPolicy({
   directives: {
+    'connect-src': ['\'self\''],
     'defaultSrc': ['\'none\''],
     'font-src': ['https://maxcdn.bootstrapcdn.com'],
     'form-action': ['\'self\''],
-    'img-src': ['\'self\''],
+    'img-src': [
+      '\'self\'',
+      'https://www.google-analytics.com/'
+    ],
     'script-src': [
       '\'unsafe-inline\'',
       'https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js',
