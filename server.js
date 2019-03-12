@@ -42,24 +42,18 @@ app.use(helmet.contentSecurityPolicy({
   directives: {
     'connect-src': ['\'self\''],
     'defaultSrc': ['\'none\''],
-    'font-src': ['https://maxcdn.bootstrapcdn.com'],
+    'font-src': ['\'self\''],
     'form-action': ['\'self\''],
     'img-src': [
       '\'self\'',
       'https://www.google-analytics.com/'
     ],
     'script-src': [
+      '\'self\'',
       '\'unsafe-inline\'',
-      'https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js',
-      'https://code.jquery.com/jquery-3.1.1.slim.min.js',
-      'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js',
       'https://www.google-analytics.com/analytics.js'
     ],
-    'style-src': [
-      '\'self\'',
-      'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/',
-      'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/'
-    ]
+    'style-src': ['\'self\'']
   }
 }))
 app.use(bodyParser.urlencoded({ extended: true }))

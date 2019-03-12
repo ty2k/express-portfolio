@@ -1,0 +1,42 @@
+<div class="container container-projects" id="projects">
+  <h2 class="heading-thin text-center">Web Development Projects</h2>
+  <% if (locals.projects) { projects.forEach(function(project) { %>
+    <div class="row project">
+      <div class="col-xs-12 col-sm-5">
+        <div class="project-img-container">
+          <img src="<%= project.screenshot_url %>" class="img-fluid" alt="Screenshot of <%= project.name %>">
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-7">
+        <h3><%= project.name %></h3>
+        <p class="project-stack">
+          <%- project.tech_stack.join(' &#124; ') %>
+        </p>
+        <p class="project-description">
+          <%- project.body %>
+        </p>
+        <% if (project.github_url) { %>
+          <a class="link-unstyled btn-project" href="<%= project.github_url %>" title="View <%= project.name %> GitHub repo">
+            <%= project.github_caption %>
+          </a> &nbsp;
+        <% } %>
+        <% if (project.secondary_url) { %>
+          <a class="link-unstyled btn-project" href="<%= project.secondary_url %>" title="<%= project.secondary_caption %>">
+            <%= project.secondary_caption %>
+          </a> &nbsp;
+        <% } %>
+        <% if (project.deployment_url) { %>
+          <a class="link-unstyled btn-project" href="<%= project.deployment_url %>" title="<%= project.deployment_caption %>">
+            <%= project.deployment_caption %>
+          </a> &nbsp;
+        <% } %>
+      </div>
+    </div>
+  <% } ) } else { %>
+    <div class="col-xs-12 col-sm-6 offset-sm-3">
+      <div class="alert alert-info" role="alert">
+        <p><i class="fa fa-github" aria-hidden="true"></i> See all of my web development projects on <a href="https://github.com/ty2k" title="Tyler Krys - GitHub">my GitHub profile</a>.</p>
+      </div>
+    </div>
+  <% } %>
+</div>

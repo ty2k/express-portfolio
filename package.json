@@ -1,11 +1,11 @@
 {
   "name": "express-portfolio",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Node/Express portfolio website",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js",
     "start": "node server.js",
+    "start:dev": "nodemon server.js",
     "test": "standard && mocha --recursive --exit"
   },
   "keywords": [
@@ -23,25 +23,25 @@
   "dependencies": {
     "bcrypt": "^3.0.4",
     "compression": "^1.7.3",
-    "cookie-session": "^2.0.0-beta.3",
+    "cookie-session": "^1.3.3",
     "dotenv": "^6.2.0",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "express-minify-html": "^0.12.0",
-    "helmet": "^3.15.1",
+    "helmet": "^3.16.0",
     "knex": "^0.16.3",
     "moment": "^2.24.0",
     "node-sass-middleware": "^0.11.0",
     "nodemailer": "^5.1.1",
     "opentype.js": "^0.11.0",
-    "pg": "^7.8.1"
+    "pg": "^7.8.2"
   },
   "devDependencies": {
     "ejs-lint": "^0.3.0",
-    "mocha": "^6.0.1",
+    "mocha": "^6.0.2",
     "nodemon": "^1.18.10",
     "standard": "^12.0.1",
-    "supertest": "^3.4.2"
+    "supertest": "^4.0.0"
   },
   "standard": {
     "env": [
