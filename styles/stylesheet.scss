@@ -8,6 +8,9 @@ body, html {
 }
 
 footer {
+  a {
+    color: $blue-dark;
+  }
   a:hover {
     text-decoration: none;
   }
@@ -45,6 +48,11 @@ footer {
   }
 }
 
+.btn-primary {
+  background-color: $blue-dark;
+  border-color: $blue-dark;
+}
+
 .btn-project {
   border: 3px solid $black;
   color: black;
@@ -57,6 +65,13 @@ footer {
 }
 
 .container-blog {
+  a {
+    color: $blue-dark;
+    font-weight: 600;
+  }
+  code {
+    color: $red-dark;
+  }
   margin-bottom: 50px;
   margin-top: 50px;
 }
@@ -64,14 +79,12 @@ footer {
 .container-contact {
   .form-horizontal {
     background-color: $semi-transparent-dark-background;
-    margin-left: -15px;
-    padding: 1em;
-    position: absolute;
-    top: 10%;
+    margin: 0;
     width: 100%;
   }
   background-image: url('../images/marsh-1600x1200.jpg');
   color: $white;
+  padding: 8em 0;
 }
 
 .container-contact-solid {
@@ -84,6 +97,7 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
+  max-width: 100%;
   width: 100%;
 }
 
@@ -108,8 +122,7 @@ footer {
 }
 
 .container-social {
-  padding-top: 50px;
-  padding-bottom: 150px;
+  padding: 8em 0;
 }
 
 .heading-thin {
@@ -160,6 +173,23 @@ footer {
   width: 100%;
 }
 
+.icon-contact {
+  filter: invert(1);
+  height: 1em;
+  width: 1em;
+}
+
+.icon-menu {
+  filter: invert(0.4);
+  height: 1.25em;
+  width: 1em;
+}
+
+.icon-social {
+  height: 1em;
+  width: 1em;
+}
+
 .link-unstyled {
   &,
   &:visited,
@@ -181,6 +211,10 @@ footer {
 }
 
 .project-description {
+  a {
+    color: $blue-dark;
+    font-weight: 500;
+  }
   font-weight: 100;
 }
 
@@ -201,6 +235,7 @@ footer {
 
 .tk-logo-header {
   background-color: $grey-logo-background;
+  fill: inherit;
   height: 30px;
   margin-right: 12px;
   width: 30px;
