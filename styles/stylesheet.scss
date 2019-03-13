@@ -206,6 +206,13 @@ footer {
   z-index: 2;
 }
 
+.navbar-light .navbar-nav .nav-link {
+  color: $black-70;
+  :hover {
+    color: $black-80;
+  }
+}
+
 .project {
   padding: 40px 0;
 }
