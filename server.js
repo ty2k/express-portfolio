@@ -74,7 +74,6 @@ app.use('/styles', sass({
   debug: true,
   outputStyle: 'compressed'
 }))
-app.use(compression())
 app.use(minifyHTML({
   override: true,
   exception_url: false,
