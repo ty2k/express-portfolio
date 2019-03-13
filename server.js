@@ -57,6 +57,7 @@ app.use(helmet.contentSecurityPolicy({
   }
 }))
 app.use(bodyParser.urlencoded({ extended: true }))
+app.use(compression())
 app.use(cookieSession({
   name: 'session',
   keys: [KEY_1, KEY_2]
