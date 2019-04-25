@@ -71,12 +71,14 @@ DB_PORT=
 - [moment](https://www.npmjs.com/package/moment) formats dates in the blog
 - [Nodemailer](https://nodemailer.com) sends email from the contact form
 - [node-sass-middleware](https://www.npmjs.com/package/node-sass-middleware) compiles SCSS into CSS
+- [OpenType.js](https://www.npmjs.com/package/opentype) as a TrueType parser in `routes/signature-api.js`
 - [pg](https://www.npmjs.com/package/pg) as a Postgres client
 
 ## Dev dependencies
 
 - [ejs-lint](https://www.npmjs.com/package/ejs-lint) for linting EJS templates
 - [Mocha](https://mochajs.org/) for testing
+- [Nodemon](https://nodemon.io/) for hot reloading in development
 - [StandardJS](https://standardjs.com/) for linting JavaScript
 - [SuperTest](https://github.com/visionmedia/supertest) for testing HTTP routes
 
