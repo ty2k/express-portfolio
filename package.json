@@ -1,6 +1,6 @@
 {
   "name": "express-portfolio",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Node/Express portfolio website",
   "main": "server.js",
   "scripts": {
@@ -33,7 +33,7 @@
     "moment": "^2.24.0",
     "node-sass-middleware": "^0.11.0",
     "nodemailer": "^6.1.1",
-    "opentype.js": "^0.11.0",
+    "opentype.js": "^1.0.1",
     "pg": "^7.10.0"
   },
   "devDependencies": {
