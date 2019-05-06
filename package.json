@@ -28,7 +28,7 @@
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "express-minify-html": "^0.12.0",
-    "helmet": "^3.16.0",
+    "helmet": "^3.18.0",
     "knex": "^0.16.5",
     "moment": "^2.24.0",
     "node-sass-middleware": "^0.11.0",
