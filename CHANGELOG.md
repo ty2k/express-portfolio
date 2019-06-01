@@ -3,6 +3,19 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.2] - 2019-06-01
+### Changed
+- Updates to dependencies:
+  - `dotenv` to v8.0.0
+  - `express` to v4.17.1
+  - `helmet` to v3.18.0
+  - `knex` to v0.17.2
+  - `nodemailer` to v6.2.1
+  - `opentype.js` to v1.1.0
+  - `pg` to v7.11.0
+- Updates to devDependencies
+  - `nodemon` to v1.19.1
+
 ## [2.0.1] - 2019-04-24
 ### Changed
 - Updates to dependencies:
