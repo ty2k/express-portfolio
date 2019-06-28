@@ -4,6 +4,8 @@ Travis CI build of master branch: [![Travis CI build of master branch](https://t
 
 **Express-Portfolio** serves my [portfolio website](https://tylerkrys.ca). It includes a project gallery, a blog, and an email contact form.
 
+See `CHANGELOG.md` for version history.
+
 ## Install
 
 `npm install`
