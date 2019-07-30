@@ -67,7 +67,7 @@ DB_PORT=
 - [compression](https://www.npmjs.com/package/compression) gzips resources for speedy transmission
 - [dotenv](https://www.npmjs.com/package/dotenv) loads environment variables from the `.env` file into `process.env`
 - [Embedded JavaScript](http://www.embeddedjs.com/) for JavaScript templating
-- [express-minify-html](https://www.npmjs.com/package/express-minify-html) minifies HTML in the Express response object for speedy transmission
+- [express-minify-html-2](https://www.npmjs.com/package/express-minify-html-2) minifies HTML in the Express response object for speedy transmission
 - [Helmet](https://helmetjs.github.io/) for HTTP header security
 - [Knex.js](http://knexjs.org/) builds SQL queries
 - [moment](https://www.npmjs.com/package/moment) formats dates in the blog

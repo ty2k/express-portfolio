@@ -25,7 +25,7 @@ const bodyParser = require('body-parser')
 const compression = require('compression')
 const cookieSession = require('cookie-session')
 const helmet = require('helmet')
-const minifyHTML = require('express-minify-html')
+const minifyHTML = require('express-minify-html-2')
 const sass = require('node-sass-middleware')
 
 // Routes
