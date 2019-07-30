@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
   knex()('posts')
     .select('*')
     .then((results) => {
-      let templateVars = {
+      const templateVars = {
         posts: results
       }
       res.render('blog-index', templateVars)
@@ -30,15 +30,15 @@ router.get('/:slug', (req, res) => {
       if (results.length === 0) {
         knex()('posts')
           .select('*')
-          .then((altResults) => {
-            let altTemplateVars = {
-              posts: altResults,
+          .then((results) => {
+            const templateVars = {
+              posts: results,
               isBlogSearch: true
             }
-            res.status(404).render('404', altTemplateVars)
+            res.status(404).render('404', templateVars)
           })
       } else {
-        let templateVars = {
+        const templateVars = {
           post: results[0],
           timeCreated: moment(results[0].time_created_at).format('MMMM D, YYYY')
         }

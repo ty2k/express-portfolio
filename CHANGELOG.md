@@ -3,6 +3,19 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.0.0] - 2019-07-29
+### Changed
+- Switched dependencies:
+  - `express-html-minifier` to `express-html-minifier-2` v1.0.1 due to [CVE-2018-16487](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-16487)
+- Updates to dependencies:
+  - `helmet` to v3.20.0
+  - `knex` to v0.19.1
+  - `nodemailer` to v6.3.0
+  - `pg` to v7.12.0
+- Updates to devDependencies:
+  - `mocha` to v6.2.0
+  - `standard` to v13.1.0
+
 ## [2.0.3] - 2019-06-27
 ### Changed
 - Updates to dependencies:

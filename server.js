@@ -25,7 +25,7 @@ const bodyParser = require('body-parser')
 const compression = require('compression')
 const cookieSession = require('cookie-session')
 const helmet = require('helmet')
-const minifyHTML = require('express-minify-html')
+const minifyHTML = require('express-minify-html-2')
 const sass = require('node-sass-middleware')
 
 // Routes
@@ -41,7 +41,7 @@ app.use(helmet())
 app.use(helmet.contentSecurityPolicy({
   directives: {
     'connect-src': ['\'self\''],
-    'defaultSrc': ['\'none\''],
+    defaultSrc: ['\'none\''],
     'font-src': ['\'self\''],
     'form-action': ['\'self\''],
     'img-src': [
@@ -111,7 +111,7 @@ app.get('/', (req, res) => {
     .select(['*'])
     .orderBy('display_order', 'desc')
     .then((results) => {
-      let templateVars = {
+      const templateVars = {
         projects: results
       }
       res.render('index', templateVars)
