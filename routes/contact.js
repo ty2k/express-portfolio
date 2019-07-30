@@ -8,8 +8,7 @@ const GMAIL_PASS = process.env.GMAIL_PASS
 
 // POST route from contact form
 router.post('/', (req, res) => {
-  let mailOpts, smtpTrans
-  smtpTrans = nodemailer.createTransport({
+  const smtpTrans = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 465,
     secure: true,
@@ -18,7 +17,7 @@ router.post('/', (req, res) => {
       pass: GMAIL_PASS
     }
   })
-  mailOpts = {
+  const mailOpts = {
     from: req.body.name + ' &lt;' + req.body.email + '&gt;',
     to: GMAIL_USER,
     subject: `Message from contact form on ${req.body.formlocation}`,

@@ -12,7 +12,7 @@ describe('Knex database migration file(s)', () => {
 
   if (migrations && migrations.length > 0) {
     migrations.forEach((migrationFile) => {
-      let migration = require(`../../db/migrations/${migrationFile}`)
+      const migration = require(`../../db/migrations/${migrationFile}`)
 
       // Test for presence of "up" roll forward function
       it(`migration file ${migrationFile} can be rolled forward`, () => {
