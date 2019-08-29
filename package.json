@@ -40,7 +40,7 @@
     "ejs-lint": "^0.3.0",
     "mocha": "^6.2.0",
     "nodemon": "^1.19.1",
-    "standard": "^13.1.0",
+    "standard": "^14.1.0",
     "supertest": "^4.0.2"
   },
   "standard": {
