@@ -3,6 +3,19 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.1.0] - 2019-08-29
+### Added
+- Unit test `doc-ver-freshness.js` checks that the topmost version in this history file matches the current package.json version.
+
+### Changed
+- Updates to dependencies:
+  - `dotenv` to v8.1.0
+  - `helmet` to v3.20.1
+  - `knex` to v0.19.3
+  - `pg` to v7.12.1
+- Updates to devDependencies:
+  - `standard` to v14.1.0
+
 ## [3.0.0] - 2019-07-29
 ### Changed
 - Switched dependencies:
