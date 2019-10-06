@@ -3,9 +3,21 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.1.1] - 2019-10-05
+### Changed
+- Renamed `doc-ver-freshness.js` to `version-freshness.js`, added test to compare versions with `package-lock.json`.
+- Updates to dependencies:
+  - `ejs` to v2.7.1
+  - `helmet` to v3.21.1
+  - `knex` to v0.19.4
+- Updates to devDependencies:
+  - `mocha` to v6.2.1
+  - `nodemon` to v1.19.3
+  - `standard` to v14.3.1
+
 ## [3.1.0] - 2019-08-29
 ### Added
-- Unit test `doc-ver-freshness.js` checks that the topmost version in this history file matches the current package.json version.
+- Unit test `doc-ver-freshness.js` checks that the topmost version in this history file matches the current `package.json` version.
 
 ### Changed
 - Updates to dependencies:
