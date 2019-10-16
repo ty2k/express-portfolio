@@ -39,7 +39,7 @@
   "devDependencies": {
     "ejs-lint": "^0.3.0",
     "mocha": "^6.2.1",
-    "nodemon": "^1.19.3",
+    "nodemon": "^1.19.4",
     "standard": "^14.3.1",
     "supertest": "^4.0.2"
   },
