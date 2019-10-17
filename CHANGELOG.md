@@ -3,6 +3,16 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.1.2] - 2019-10-16
+### Changed
+- Updates to dependencies:
+  - `dotenv` to v8.2.0
+  - `knex` to v0.19.5
+  - `nodemailer` to v6.3.1
+- Updates to devDependencies:
+  - `nodemon` to v1.19.4
+- Updates `.nvmrc` and `.travis.yml` to Node v10.16.3
+
 ## [3.1.1] - 2019-10-05
 ### Changed
 - Renamed `doc-ver-freshness.js` to `version-freshness.js`, added test to compare versions with `package-lock.json`.
