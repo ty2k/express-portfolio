@@ -37,7 +37,7 @@
     "pg": "^7.12.1"
   },
   "devDependencies": {
-    "ejs-lint": "^0.3.0",
+    "ejs-lint": "^1.0.1",
     "mocha": "^6.2.2",
     "nodemon": "^1.19.4",
     "standard": "^14.3.1",
