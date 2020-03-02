@@ -2,12 +2,12 @@
 <html lang="en">
   <head>
     <title>404 - Tyler Krys</title>
-    <% include partials/_head.ejs %>
+    <%- include('./partials/_head.ejs') %>
     <!-- No-index -->
     <meta name="robots" content="noindex">
   </head>
   <body>
-    <% include partials/_header.ejs %>
+    <%- include('./partials/_header.ejs') %>
     <div class="container">
       <h1 class="heading-thin text-center">404</h1>
       <div class="row">
@@ -36,6 +36,6 @@
         </div>
       </div>
     </div>
-    <% include partials/_bootstrap.ejs %>
+    <%- include('./partials/_bootstrap.ejs') %>
   </body>
 </html>

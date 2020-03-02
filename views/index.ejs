@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>Tyler Krys - Full Stack Web Developer</title>
-    <% include partials/_head.ejs %>
+    <%- include('./partials/_head.ejs') %>
     <!-- Meta Description -->
     <meta name="Description" content="Tyler Krys is a full stack web developer in Victoria, BC, Canada with a background in e-commerce, marketing, and sales.">
     <!-- Open Graph -->
@@ -14,12 +14,12 @@
     <link rel="canonical" href="https://tylerkrys.ca">
   </head>
   <body>
-    <% include partials/_header.ejs %>
-    <% include partials/_hero.ejs %>
-    <% include partials/_projects.ejs %>
-    <% include partials/_social.ejs %>
-    <% include partials/_contact-form-index.ejs %>
-    <% include partials/_footer.ejs %>
-    <% include partials/_bootstrap.ejs %>
+    <%- include('./partials/_header.ejs') %>
+    <%- include('./partials/_hero.ejs') %>
+    <%- include('./partials/_projects.ejs') %>
+    <%- include('./partials/_social.ejs') %>
+    <%- include('./partials/_contact-form-index.ejs') %>
+    <%- include('./partials/_footer.ejs') %>
+    <%- include('./partials/_bootstrap.ejs') %>
   </body>
 </html>

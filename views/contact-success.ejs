@@ -2,18 +2,18 @@
 <html lang="en">
   <head>
     <title>Contact Form Submitted - Tyler Krys</title>
-    <% include partials/_head.ejs %>
+    <%- include('./partials/_head.ejs') %>
     <!-- No-index -->
     <meta name="robots" content="noindex">
   </head>
   <body>
-    <% include partials/_header.ejs %>
+    <%- include('./partials/_header.ejs') %>
     <div class="jumbotron" id="hero">
       <h1 class="text-center">Success!</h1>
       <p class="text-center">The contact form worked and your message is on its way.</p>
       <p class="text-center"><a href="/">Back to TylerKrys.ca</a></p>
     </div>
-    <% include partials/_footer.ejs %>
-    <% include partials/_bootstrap.ejs %>
+    <%- include('./partials/_footer.ejs') %>
+    <%- include('./partials/_bootstrap.ejs') %>
   </body>
 </html>

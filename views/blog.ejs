@@ -2,12 +2,12 @@
 <html lang="en">
   <head>
     <title><%= post.title %> - Tyler Krys</title>
-    <% include partials/_head.ejs %>
+    <%- include('./partials/_head.ejs') %>
     <!-- Canonical -->
     <link rel="canonical" href="https://tylerkrys.ca/blog/<%= post.slug %>">
   </head>
   <body>
-    <% include partials/_header.ejs %>
+    <%- include('./partials/_header.ejs') %>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
@@ -26,7 +26,7 @@
         </div>
       </div>
     </div>
-    <% include partials/_footer.ejs %>
-    <% include partials/_bootstrap.ejs %>
+    <%- include('./partials/_footer.ejs') %>
+    <%- include('./partials/_bootstrap.ejs') %>
   </body>
 </html>

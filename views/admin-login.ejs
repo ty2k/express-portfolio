@@ -2,12 +2,12 @@
 <html lang="en">
   <head>
     <title>Admin Login</title>
-    <% include partials/_head.ejs %>
+    <%- include('./partials/_head.ejs') %>
     <!-- No-index -->
     <meta name="robots" content="noindex">
   </head>
   <body>
-    <% include partials/_header.ejs %>
+    <%- include('./partials/_header.ejs') %>
     <div class="col-xs-12 col-sm-6 offset-sm-3 ">
       <div class="container">
         <h1 class="heading-thin text-center">Admin Login</h1>
@@ -22,6 +22,6 @@
         </form>
       </div>
     </div>
-    <% include partials/_bootstrap.ejs %>
+    <% include('./partials/_bootstrap.ejs') %>
   </body>
 </html>
