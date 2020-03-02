@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <title>Blog - Tyler Krys</title>
-    <% include partials/_head.ejs %>
+    <%- include('./partials/_head.ejs') %>
     <!-- Meta Description -->
     <meta name="Description" content="Blog articles from full stack developer Tyler Krys. Posts about Node.js, Express, Nodemailer.">
     <!-- Canonical -->
     <link rel="canonical" href="https://tylerkrys.ca/blog">
   </head>
   <body>
-    <% include partials/_header.ejs %>
+    <% include('./partials/_header.ejs') %>
     <div class="container container-blog">
       <div class="jumbotron">
         <h1>Blog</h1>
@@ -26,7 +26,7 @@
         </div>
       <% } %>
     </div>
-    <% include partials/_footer.ejs %>
-    <% include partials/_bootstrap.ejs %>
+    <% include('./partials/_footer.ejs') %>
+    <% include('./partials/_bootstrap.ejs') %>
   </body>
 </html>
