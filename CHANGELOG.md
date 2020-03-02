@@ -3,6 +3,24 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.0.0] - 2020-03-02
+### Changed
+- Bumps `.nvmrc` to Node v12.16.1.
+- `ejs` major version upgrade includes a breaking change to the `include` functionality. This resulted in a refactor to all EJS views/partials in the project.
+- Upstream `node-sass` vulnerability fixed with `npm audit fix` in `package-lock.json`.
+- Updates to dependencies:
+  - `bcrypt` to v4.0.1
+  - `cookie-session` to v1.4.0
+  - `ejs` to v3.0.1
+  - `helmet` to v3.21.3
+  - `knex` to v0.20.10
+  - `nodemailer` to v6.4.4
+  - `pg` to v7.18.2
+- Updates to devDependencies:
+  - `ejs-lint` to v1.0.1
+  - `mocha` to v7.1.0
+  - `nodemon` to v2.0.2
+
 ## [3.1.3] - 2019-11-16
 ### Changed
 - Updates to dependencies:
