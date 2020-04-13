@@ -3,6 +3,20 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.0.1] - 2020-04-12
+### Changed
+- Updates to dependencies:
+  - `ejs` to v3.0.2
+  - `helmet` to v3.22.0
+  - `knex` to v0.20.13
+  - `nodemailer` to v6.4.6
+  - `pg` to v8.0.2
+- Updates to devDependencies:
+  - `ejs-lint` to v1.1.0
+  - `mocha` to v7.1.1
+  - `nodemon` to v2.0.3
+  - `standard` to v14.3.3
+
 ## [4.0.0] - 2020-03-02
 ### Changed
 - Bumps `.nvmrc` to Node v12.16.1.
