@@ -34,7 +34,7 @@
     "node-sass-middleware": "^0.11.0",
     "nodemailer": "^6.4.6",
     "opentype.js": "^1.1.0",
-    "pg": "^8.0.2"
+    "pg": "^8.0.3"
   },
   "devDependencies": {
     "ejs-lint": "^1.1.0",
