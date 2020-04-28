@@ -33,7 +33,6 @@ const adminRoutes = require('./routes/admin')
 const blogRoutes = require('./routes/blog')
 const contactRoutes = require('./routes/contact')
 const resumeRoutes = require('./routes/resume')
-const signatureAPIRoutes = require('./routes/signature-api')
 
 // Middleware
 app.set('view engine', 'ejs')
@@ -92,7 +91,6 @@ app.use('/admin', adminRoutes)
 app.use('/blog', blogRoutes)
 app.use('/contact', contactRoutes)
 app.use('/resume', resumeRoutes)
-app.use('/signature-api', signatureAPIRoutes)
 
 // For production http:// requests, redirect to https://
 if (ENV === 'production') {
