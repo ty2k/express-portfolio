@@ -3,6 +3,18 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.0.2] - 2020-04-27
+### Removed
+- Removes unused route `./routes/signature-api.js`, references from `./server.js`, and fonts from `./public/fonts`. Also removes associated dependency `opentype.js`.
+### Changed
+- Bumps Node to v12.16.2 in `.nvmrc` and `.travis.yml`.
+- Updates to dependencies:
+  - `ejs` to v3.1.2
+  - `knex` to v0.21.1
+  - `pg` to v8.0.3
+- Updates to devDependencies:
+  - `mocha` to v7.1.2
+
 ## [4.0.1] - 2020-04-12
 ### Changed
 - Updates to dependencies:

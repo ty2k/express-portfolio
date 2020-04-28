@@ -1,6 +1,6 @@
 {
   "name": "express-portfolio",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Node/Express portfolio website",
   "main": "server.js",
   "scripts": {
@@ -25,20 +25,19 @@
     "compression": "^1.7.4",
     "cookie-session": "^1.4.0",
     "dotenv": "^8.2.0",
-    "ejs": "^3.0.2",
+    "ejs": "^3.1.2",
     "express": "^4.17.1",
     "express-minify-html-2": "^1.0.1",
     "helmet": "^3.22.0",
-    "knex": "^0.20.13",
+    "knex": "^0.21.1",
     "moment": "^2.24.0",
     "node-sass-middleware": "^0.11.0",
     "nodemailer": "^6.4.6",
-    "opentype.js": "^1.1.0",
-    "pg": "^8.0.2"
+    "pg": "^8.0.3"
   },
   "devDependencies": {
     "ejs-lint": "^1.1.0",
-    "mocha": "^7.1.1",
+    "mocha": "^7.1.2",
     "nodemon": "^2.0.3",
     "standard": "^14.3.3",
     "supertest": "^4.0.2"
