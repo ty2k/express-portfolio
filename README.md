@@ -29,7 +29,7 @@ You can alternatively place the `GMAIL_USER` and `GMAIL_PASS` variables in a `.e
 
 ## Environment variables using .env
 
-The included `.env.example` file can be used to create a `.env` file to hold environment variables in an easily accessible place in the project directory. 
+The included `.env.example` file can be used to create a `.env` file to hold environment variables in an easily accessible place in the project directory.
 
 `server.js` contains a reference to an environment variable that can be used to hold a [Google Analytics tracking ID](https://support.google.com/analytics/answer/1008080?hl=en), which gets used in the `views/partials/_head.ejs` partial:
 
@@ -73,7 +73,6 @@ DB_PORT=
 - [moment](https://www.npmjs.com/package/moment) formats dates in the blog
 - [Nodemailer](https://nodemailer.com) sends email from the contact form
 - [node-sass-middleware](https://www.npmjs.com/package/node-sass-middleware) compiles SCSS into CSS
-- [OpenType.js](https://www.npmjs.com/package/opentype) as a TrueType parser in `routes/signature-api.js`
 - [pg](https://www.npmjs.com/package/pg) as a Postgres client
 
 ## Dev dependencies
