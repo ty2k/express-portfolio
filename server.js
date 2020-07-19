@@ -68,8 +68,8 @@ app.use((req, res, next) => {
   next()
 })
 app.use('/styles', sass({
-  src: path.join(__dirname, '/styles'),
-  dest: path.join(__dirname, '/public/styles'),
+  src: path.join(__dirname, 'styles'),
+  dest: path.join(__dirname, 'public', 'styles'),
   debug: true,
   outputStyle: 'compressed'
 }))
