@@ -1,6 +1,6 @@
 {
   "name": "express-portfolio",
-  "version": "4.0.5",
+  "version": "4.0.6",
   "description": "Node/Express portfolio website",
   "main": "server.js",
   "scripts": {
