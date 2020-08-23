@@ -3,6 +3,17 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.0.7] - 2020-08-23
+### Changed
+- Replaced `ejs` with `ejs-zero-dependencies` at v3.1.7 to prune dependencies
+- Updates to dependencies:
+  - `helmet` to v4.1.0
+  - `knex` to v0.21.5
+  - `nodemailer` to v6.4.11
+  - `pg` to v8.3.2
+- Updates to devDependencies
+  - `mocha` to v8.1.1
+
 ## [4.0.6] - 2020-07-18
 ### Changed
 - Fixes calls to `path.join()` in `server.js` so paths will work in Windows.
