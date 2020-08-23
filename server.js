@@ -35,6 +35,7 @@ const contactRoutes = require('./routes/contact')
 const resumeRoutes = require('./routes/resume')
 
 // Middleware
+app.engine('ejs', require('ejs-zero-dependencies').__express)
 app.set('view engine', 'ejs')
 app.use(helmet())
 app.use(helmet.contentSecurityPolicy({
