@@ -8,8 +8,6 @@ const changeLog = fs.readFileSync('./CHANGELOG.md', 'utf-8')
 const nvmrc = fs.readFileSync('./.nvmrc', 'utf-8')
 const travisYaml = fs.readFileSync('./.travis.yml', 'utf-8')
 
-console.log(travisYaml)
-
 // Test that versions in package.json, package-lock.json, and CHANGELOG.md match
 describe('Version freshness', () => {
   const verP = packageJson.version
@@ -24,8 +22,6 @@ describe('Version freshness', () => {
   // Rather that add a new package to parse the Travis YAML config,
   // just look for the version number as a substring.
   const verT = travisYaml.substring(travisYaml.indexOf('- "') + 3, travisYaml.length - 2)
-  console.log('verT: ', verT)
-  console.log('verN: ', verN)
 
   it(`package.json v${verP} should match package-lock.json v${verL}`, () => {
     if (verP === verL) {
