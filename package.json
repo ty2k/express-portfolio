@@ -1,6 +1,6 @@
 {
   "name": "express-portfolio",
-  "version": "4.0.7",
+  "version": "4.0.8",
   "description": "Node/Express portfolio website",
   "main": "server.js",
   "scripts": {
@@ -33,11 +33,11 @@
     "moment": "^2.27.0",
     "node-sass-middleware": "^0.11.0",
     "nodemailer": "^6.4.11",
-    "pg": "^8.3.2"
+    "pg": "^8.3.3"
   },
   "devDependencies": {
     "ejs-lint": "^1.1.0",
-    "mocha": "^8.1.1",
+    "mocha": "^8.1.3",
     "nodemon": "^2.0.4",
     "standard": "^14.3.4",
     "supertest": "^4.0.2"
