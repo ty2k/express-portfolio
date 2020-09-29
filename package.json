@@ -29,7 +29,7 @@
     "express": "^4.17.1",
     "express-minify-html-2": "^1.0.1",
     "helmet": "^4.1.0",
-    "knex": "^0.21.5",
+    "knex": "^0.21.6",
     "moment": "^2.27.0",
     "node-sass-middleware": "^0.11.0",
     "nodemailer": "^6.4.11",
