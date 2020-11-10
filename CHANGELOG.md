@@ -3,6 +3,19 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.0.11] - 2020-11-09
+- Bumps Node to v14.15.0 in `.nvmrc` and `.travis.yml`.
+- Updates to dependencies:
+  - `helmet` to v4.2.0
+  - `knex` to v0.21.12
+  - `nodemailer` to v6.4.15
+  - `pg` to v8.4.2
+- Updates to devDependencies
+  - `mocha` to v8.2.1
+  - `nodemon` to v2.0.6
+  - `standard` to v16.0.1
+  - `supertest` to v6.0.1
+
 ## [4.0.10] - 2020-10-14
 - Bumps Node to v12.19.0 in `.nvmrc` and `.travis.yml`.
 - Updates to dependencies:
