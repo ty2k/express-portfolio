@@ -1,0 +1,38 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "13:00"
+  open-pull-requests-limit: 10
+  reviewers:
+  - ty2k
+  ignore:
+  - dependency-name: y18n
+    versions:
+    - 4.0.2
+  - dependency-name: knex
+    versions:
+    - 0.21.16
+    - 0.21.17
+    - 0.21.18
+    - 0.21.19
+    - 0.95.1
+    - 0.95.2
+    - 0.95.3
+  - dependency-name: mocha
+    versions:
+    - 8.3.0
+    - 8.3.1
+  - dependency-name: nodemailer
+    versions:
+    - 6.4.17
+    - 6.4.18
+    - 6.5.0
+  - dependency-name: helmet
+    versions:
+    - 4.4.1
+  - dependency-name: pg
+    versions:
+    - 8.5.1
